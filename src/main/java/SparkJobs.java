@@ -71,8 +71,8 @@ public class SparkJobs implements IConstants {
         // write to cassandra
         df.write()
                 .format("org.apache.spark.sql.cassandra")
-                .option("keyspace", "feature_store_keyspace")
-                .option("table", "inactivity_models")
+                .option("keyspace", "keyspace_name")
+                .option("table", "table_name")
                 .option("spark.cassandra.connection.host", "127.0.0.1")
                 .option("spark.cassandra.connection.port", "9042")
                 //.option("confirm.truncate", "true") // This is to confirm mode is overwrite. Its a required field
