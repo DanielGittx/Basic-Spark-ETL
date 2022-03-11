@@ -75,10 +75,11 @@ public class SparkJobs implements IConstants {
                 .option("table", "inactivity_models")
                 .option("spark.cassandra.connection.host", "127.0.0.1")
                 .option("spark.cassandra.connection.port", "9042")
-                .option("confirm.truncate", "true") // This is to confirm mode is overwrite. Its a required field
+                //.option("confirm.truncate", "true") // This is to confirm mode is overwrite. Its a required field
                 .option("header", "false")
                 .option("spark.cassandra.output.ignoreNulls", true)
-                .mode("overwrite")
+                //.mode("overwrite")
+                .mode(SaveMode.Append)
                 .save();
 
         System.out.println("\n------------------ END Cassandra ---------------------\n");
