@@ -95,7 +95,7 @@ public class DatabaseConfigs {
         System.out.println("\nSTOPROC TO BE EXECUTED \n" + formattedStoredProcedure);
         try {
             Connection connection = getDataseConnection(
-                    "", "", "", dbTech);
+                    "", "", "", dbTech);  //Oracle , Postgress, cassandra
 
 
             CallableStatement callableStatement = connection.prepareCall(formattedStoredProcedure);

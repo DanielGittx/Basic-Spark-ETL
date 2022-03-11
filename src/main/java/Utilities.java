@@ -89,7 +89,7 @@ public class Utilities {
         confFS.addResource("/data02/nifi/hiveconfigs/core-site.xml");
         confFS.addResource("/data02/nifi/hiveconfigs/hdfs-site.xml");
         confFS.addResource("/data02/nifi/hiveconfigs/hive-site.xml");
-        return confFS;
+        return confFS; //t
 
     }
 

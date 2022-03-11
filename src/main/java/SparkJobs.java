@@ -56,10 +56,9 @@ public class SparkJobs implements IConstants {
                 .load();
 
 
-        long end = System.currentTimeMillis();
+        long end = System.currentTimeMillis(); //test
         float sec = (end - start) / 1000F;
         System.out.println("Job execution period:   : " + sec + " seconds" + "\nSql query \n" + sqlQuery + "\ncompleted!\nNow exiting...");
-
 
         return df;
 
@@ -76,7 +75,7 @@ public class SparkJobs implements IConstants {
                 .option("table", "inactivity_models")
                 .option("spark.cassandra.connection.host", "127.0.0.1")
                 .option("spark.cassandra.connection.port", "9042")
-                .option("confirm.truncate", "true") // This is to confirm mode is overwrite
+                .option("confirm.truncate", "true") // This is to confirm mode is overwrite. Its a required field
                 .option("header", "false")
                 .option("spark.cassandra.output.ignoreNulls", true)
                 .mode("overwrite")

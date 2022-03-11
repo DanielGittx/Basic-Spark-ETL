@@ -32,7 +32,7 @@ public class Main {
         //Prepare thread: contents of what to be executed in the thread
         Callable<String> future_callable_1 = () -> {
 
-            System.out.println("\n..........................JOBS THREAD 1 START..........................\n");
+            System.out.println("\n.........................JOBS THREAD 1 START.........................\n");
             long start = System.currentTimeMillis();
 
             //Tasks
